@@ -26,12 +26,6 @@ def scrape_phivolcs():
         soup = BeautifulSoup(response.text, 'html.parser')
         table = soup.find('table')
 
-table = soup.find('table')
-if not table:
-    print("No table found. Here's a preview of the page:")
-    print(soup.prettify()[:1000])
-    exit(1)
-        
         if not table:
             raise ValueError("No earthquake table found on the page.")
 
