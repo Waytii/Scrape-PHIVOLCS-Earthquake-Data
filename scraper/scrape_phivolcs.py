@@ -7,6 +7,10 @@ import os
 import ssl
 import urllib3
 
+print(f"Connecting to: {url}")
+print(f"Response status: {response.status_code}")
+print(response.text[:500])  # Preview HTML
+
 ssl._create_default_https_context = ssl._create_unverified_context
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -22,6 +26,12 @@ def scrape_phivolcs():
         soup = BeautifulSoup(response.text, 'html.parser')
         table = soup.find('table')
 
+table = soup.find('table')
+if not table:
+    print("No table found. Here's a preview of the page:")
+    print(soup.prettify()[:1000])
+    exit(1)
+        
         if not table:
             raise ValueError("No earthquake table found on the page.")
 
