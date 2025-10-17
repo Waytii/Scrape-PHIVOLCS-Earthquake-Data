@@ -7,10 +7,6 @@ import os
 import ssl
 import urllib3
 
-print(f"Connecting to: {https://earthquake.phivolcs.dost.gov.ph/}")
-print(f"Response status: {response.status_code}")
-print(response.text[:500])  # Preview HTML
-
 ssl._create_default_https_context = ssl._create_unverified_context
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
