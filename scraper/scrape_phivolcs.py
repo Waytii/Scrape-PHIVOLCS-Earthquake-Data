@@ -8,7 +8,7 @@ import os
 def scrape_phivolcs():
     url = "https://earthquake.phivolcs.dost.gov.ph/"
     headers = {
-        "User-Agent": "Mozilla/5.0"
+        "User-Agent": "Microsoft Edge/5.0"
     }
 
     try:
