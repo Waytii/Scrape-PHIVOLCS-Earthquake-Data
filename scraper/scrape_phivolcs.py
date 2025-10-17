@@ -7,7 +7,7 @@ import os
 import ssl
 import urllib3
 
-print(f"Connecting to: {url}")
+print(f"Connecting to: {https://earthquake.phivolcs.dost.gov.ph/}")
 print(f"Response status: {response.status_code}")
 print(response.text[:500])  # Preview HTML
 
