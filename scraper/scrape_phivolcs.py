@@ -4,6 +4,11 @@ import pandas as pd
 import certifi
 from datetime import datetime
 import os
+import ssl
+import urllib3
+
+ssl._create_default_https_context = ssl._create_unverified_context
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 def scrape_phivolcs():
     url = "https://earthquake.phivolcs.dost.gov.ph/"
